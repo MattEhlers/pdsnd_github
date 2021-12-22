@@ -199,12 +199,13 @@ def user_stats(df):
 
 
     # TO DO: Display counts of gender
-    # first remove washington from the results since this data is not in the washington file
+    # try to calculate this information
     try:
         gender_summary = df['Gender'].value_counts()
         # display the text summary and the view
         print("\nBelow is a summary of the genders of users for the data you selected.")
         print(gender_summary)
+    # some info can't be calculated since Washington doesn't have this data - account for that
     except Exception as e:
         print("\nUnfortunately, gender data is not currently available for Washington")
 
@@ -234,7 +235,8 @@ def user_stats(df):
     # start with x and y and -5 and 0 so when 5 is added as part of the loop they actually start at 0 and 5 for the first 5 rows of data
     x = -5
     y = 0
-    #while loop to continually show more data as long as the user selects 'yes'
+    #while loop to continually show more data each time the user selects 'yes'. After each time prompt the user for input again
+    #prompt user for input in a loop until their input is something other than yes
     while more_raw_data == 'yes':
         more_raw_data = input("Would you like to see 5 rows of raw data? Please enter Yes if so. Any other response will be considered a no.").lower()
         if more_raw_data == "yes":
