@@ -199,12 +199,13 @@ def user_stats(df):
 
 
     # TO DO: Display counts of gender
-    # first remove washington from the results since this data is not in the washington file
+    # try to calculate this information
     try:
         gender_summary = df['Gender'].value_counts()
         # display the text summary and the view
         print("\nBelow is a summary of the genders of users for the data you selected.")
         print(gender_summary)
+    # some info can't be calculated since Washington doesn't have this data - account for that
     except Exception as e:
         print("\nUnfortunately, gender data is not currently available for Washington")
 
