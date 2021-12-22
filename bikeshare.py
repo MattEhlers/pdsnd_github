@@ -214,12 +214,12 @@ def user_stats(df):
         # calculate the earliest birth year
         earliest_birthyear = int(df['Birth Year'].min())
         # calculate the most recent birth year
-        recent_birthyear = int(df['Birth Year'].max())
+        most_recent_birthyear = int(df['Birth Year'].max())
         # calculate the most common birth year
         common_birthyear = int(df['Birth Year'].mode()[0])
         # then print each of those results
         print("\nThe earliest birth year in the data you selected is {}.".format(earliest_birthyear))
-        print("The most recent birth year in the data you selected is {}.".format(recent_birthyear))
+        print("The most recent birth year in the data you selected is {}.".format(most_recent_birthyear))
         print("The most common birth year in the data you selected is {}.".format(common_birthyear))
     except Exception as e:
         print("\nUnfortunately, birth year data is not currently available for Washington")
