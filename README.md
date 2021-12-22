@@ -2,6 +2,7 @@
 
 ### Date created
 Include the date you created this project and README file.
+The original bikeshare project was created in December of 2021. This README file is also being created in December of 2021. They are both for a Udacity course called Programming for Data Science.
 
 ### Project Title
 Replace the Project Title
@@ -14,4 +15,3 @@ Include the files used
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
