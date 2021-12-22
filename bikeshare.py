@@ -234,7 +234,8 @@ def user_stats(df):
     # start with x and y and -5 and 0 so when 5 is added as part of the loop they actually start at 0 and 5 for the first 5 rows of data
     x = -5
     y = 0
-    #while loop to continually show more data as long as the user selects 'yes'
+    #while loop to continually show more data each time the user selects 'yes'. After each time prompt the user for input again
+    #prompt user for input in a loop until their input is something other than yes
     while raw_data == 'yes':
         raw_data = input("Would you like to see 5 rows of raw data? Please enter Yes if so. Any other response will be considered a no.").lower()
         if raw_data == "yes":
